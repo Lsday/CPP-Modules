@@ -27,6 +27,8 @@ Form& Form::operator=(Form const &src)
 {
 	this->_isSigned = src._isSigned;
 	return *this;
+
+	
 }
 
 int Form::getSignGrade() const
