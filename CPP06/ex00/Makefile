@@ -1,6 +1,6 @@
-SRC = main.cpp 
+SRC = main.cpp
 CC = clang++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -g -Wall -Werror -Wextra #-std=c++98
 NAME = convert
 OBJS = ${SRC:.cpp=.o}
 
