@@ -1,7 +1,7 @@
-SRC = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+SRC = main.cpp 
 CC = clang++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = Bureaucrat
+CFLAGS = -g -Wall -Werror -Wextra -std=c++98
+NAME = serializer
 OBJS = ${SRC:.cpp=.o}
 
 ${NAME} : ${OBJS}
