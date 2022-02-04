@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.hpp                                          :+:      :+:    :+:   */
+/*   Iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 16:23:05 by oronda            #+#    #+#             */
-/*   Updated: 2022/02/03 21:20:31 by oronda           ###   ########.fr       */
+/*   Created: 2022/02/03 18:47:17 by oronda            #+#    #+#             */
+/*   Updated: 2022/02/03 19:09:37 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-template<typename T> 
-void swap(T &a, T &b)
+#include <string>
+#include <iostream>
+
+
+
+template<typename T>
+void print(T &t)
 {
-	T temp = a;
-	a =  b;
-	b = temp;
+	std::cout << t << std::endl;
 }
 
 template<typename T>
-T min(T &a, T &b)
+void increment(T &t)
 {
-	if (a < b)
-		return a;
-	return b;
+	t++;
 }
 
 template<typename T>
-T max(T &a, T &b)
+void Iter(T *array, int count, void(*fcptr)(T&))
 {
-	if (a > b)
-		return a;
-	return b;
-	
+	for (int i = 0; i < count; i++)
+		fcptr(array[i]);
 }

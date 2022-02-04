@@ -1,38 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 16:23:05 by oronda            #+#    #+#             */
-/*   Updated: 2022/02/03 21:20:31 by oronda           ###   ########.fr       */
+/*   Created: 2022/02/03 19:13:48 by oronda            #+#    #+#             */
+/*   Updated: 2022/02/03 19:14:53 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include <iostream>
 
-template<typename T> 
-void swap(T &a, T &b)
+int main(int argc, char const *argv[])
 {
-	T temp = a;
-	a =  b;
-	b = temp;
-}
-
-template<typename T>
-T min(T &a, T &b)
-{
-	if (a < b)
-		return a;
-	return b;
-}
-
-template<typename T>
-T max(T &a, T &b)
-{
-	if (a > b)
-		return a;
-	return b;
-	
+	int *a = new int();
+	std::cout << *a << std::endl;
+	return 0;
 }
