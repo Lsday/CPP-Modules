@@ -6,15 +6,73 @@
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 19:13:48 by oronda            #+#    #+#             */
-/*   Updated: 2022/02/03 19:14:53 by oronda           ###   ########.fr       */
+/*   Updated: 2022/02/07 09:54:12 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "Array.hpp"
+#include "vector"
 
-int main(int argc, char const *argv[])
+
+int main(void)
 {
-	int *a = new int();
-	std::cout << *a << std::endl;
-	return 0;
+	Array<int> int_array;
+
+	Array<int> int_array2(5);
+	int_array = int_array2;
+	for (size_t i = 0; i < int_array.size(); i++)
+	{
+		int_array[i] = i;
+		std::cout << int_array[i] << " ";
+	}
+	std::cout << std::endl;
+	for (size_t i = 0; i < int_array2.size(); i++)
+	{
+		std::cout << int_array2[i] << " ";
+	}
+	std::cout << std::endl;
+
+	Array<float> float_array(25);
+	for (size_t i = 0; i < float_array.size(); i++)
+	{
+		std::cout << float_array[i] << "f ";
+	}
+	std::cout << std::endl;
+
+	Array<std::string> string_array(5);
+	for (size_t i = 0; i < string_array.size(); i++)
+	{
+		string_array[i] = std::to_string(i);
+		std::cout << string_array[i] << "s ";
+	}
+	std::cout << std::endl;
+
+	Array<std::string> string_array2 = string_array;
+	for (size_t i = 0; i < 5; i++)
+		string_array2[i] = "42";
+	for (size_t i = 0; i < string_array.size(); i++)
+		std::cout << string_array[i] << "s <> " << string_array2[i] << std::endl;
+
+	std::cout << "---" << std::endl;
+
+	try
+	{
+		int_array2[-1] = 2;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+	try
+	{
+		int_array2[999] = 2;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+	return (0);
 }
