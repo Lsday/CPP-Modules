@@ -6,13 +6,13 @@
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 19:13:48 by oronda            #+#    #+#             */
-/*   Updated: 2022/02/07 09:54:12 by oronda           ###   ########.fr       */
+/*   Updated: 2022/02/07 10:04:11 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Array.hpp"
-#include "vector"
+#include <string>
 
 
 int main(void)
@@ -41,10 +41,14 @@ int main(void)
 	std::cout << std::endl;
 
 	Array<std::string> string_array(5);
+	string_array[0] = "hello ";
+	string_array[1] = "ici ";
+	string_array[2] = "c'est ";
+	string_array[3] = "bello ";
+	string_array[4] = "bito";
 	for (size_t i = 0; i < string_array.size(); i++)
 	{
-		string_array[i] = std::to_string(i);
-		std::cout << string_array[i] << "s ";
+		std::cout << string_array[i];
 	}
 	std::cout << std::endl;
 
@@ -52,7 +56,7 @@ int main(void)
 	for (size_t i = 0; i < 5; i++)
 		string_array2[i] = "42";
 	for (size_t i = 0; i < string_array.size(); i++)
-		std::cout << string_array[i] << "s <> " << string_array2[i] << std::endl;
+		std::cout << string_array[i] << "<> " << string_array2[i] << std::endl;
 
 	std::cout << "---" << std::endl;
 

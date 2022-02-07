@@ -1,6 +1,6 @@
 SRC = main.cpp
 CC = clang++
-CFLAGS = -g #-Wall -Werror -Wextra -std=c++98
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = array
 OBJS = ${SRC:.cpp=.o}
 
