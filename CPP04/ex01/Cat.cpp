@@ -6,7 +6,7 @@
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 18:38:55 by oronda            #+#    #+#             */
-/*   Updated: 2021/12/19 20:52:46 by oronda           ###   ########.fr       */
+/*   Updated: 2022/02/07 21:41:50 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Cat::Cat(Cat const & src)
 	this->type = src.type;
 	Brain *newBrain = new Brain();
 	*newBrain = *(src.brain);
+	delete this->brain;
 	this->brain = newBrain;
 	
 }
@@ -41,6 +42,7 @@ Cat & Cat::operator=(Cat const & src)
 	this->type = src.type;
 	Brain *newBrain = new Brain();
 	*newBrain = *(src.brain);
+	delete this->brain;
 	this->brain = newBrain;
 	return *this;
 }

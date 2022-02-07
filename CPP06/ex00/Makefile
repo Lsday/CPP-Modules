@@ -1,6 +1,6 @@
 SRC = main.cpp
 CC = clang++
-CFLAGS = -g -Wall -Werror -Wextra #-std=c++98
+CFLAGS = -g -Wall -Werror -Wextra -std=c++98 -fsanitize=address
 NAME = convert
 OBJS = ${SRC:.cpp=.o}
 

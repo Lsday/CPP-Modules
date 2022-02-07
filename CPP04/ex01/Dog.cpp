@@ -6,7 +6,7 @@
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 16:14:54 by oronda            #+#    #+#             */
-/*   Updated: 2021/12/19 21:05:08 by oronda           ###   ########.fr       */
+/*   Updated: 2022/02/08 00:07:59 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Dog::Dog(Dog const & src)
 	this->type = src.type;
 	Brain *newBrain = new Brain();
 	*newBrain = *(src.brain);
+	delete this->brain;
 	this->brain = newBrain;
 }
 Dog::~Dog()
@@ -40,6 +41,7 @@ Dog & Dog::operator=(Dog const & src)
 	this->type = src.type;
 	Brain *newBrain = new Brain();
 	*newBrain = *(src.brain);
+	delete this->brain;
 	this->brain = newBrain;
 	return *this;
 }

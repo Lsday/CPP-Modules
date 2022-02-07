@@ -1,7 +1,7 @@
-SRC = main.cpp
+SRC = main.cpp Span.cpp
 CC = clang++
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address
-NAME = array
+CFLAGS = #-Wall -Werror -Wextra -std=c++98 -fsanitize=address
+NAME = span
 OBJS = ${SRC:.cpp=.o}
 
 ${NAME} : ${OBJS}

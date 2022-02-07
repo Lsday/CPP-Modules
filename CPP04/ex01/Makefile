@@ -1,6 +1,6 @@
 SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 CC = g++
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra std-fsanitize=address
 NAME = test
 OBJS = ${SRC:.cpp=.o}
 

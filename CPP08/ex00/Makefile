@@ -1,7 +1,7 @@
 SRC = main.cpp
 CC = clang++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address
-NAME = array
+NAME = easy
 OBJS = ${SRC:.cpp=.o}
 
 ${NAME} : ${OBJS}
