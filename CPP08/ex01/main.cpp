@@ -6,7 +6,7 @@
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:58:45 by oronda            #+#    #+#             */
-/*   Updated: 2022/02/08 13:00:20 by oronda           ###   ########.fr       */
+/*   Updated: 2022/02/08 14:32:16 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,13 @@ int main()
 	{
 		try
 		{
-			std::vector<int> pouet = {6,3,17,9,11};
+			std::vector<int> pouet;
+			pouet.push_back(6);
+			pouet.push_back(3);
+			pouet.push_back(17);
+			pouet.push_back(9);
+			pouet.push_back(11);
+
 			Span sp(5);
 			sp.addNumber(pouet.begin(), pouet.end());
 			std::cout << sp.shortestSpan() << std::endl;

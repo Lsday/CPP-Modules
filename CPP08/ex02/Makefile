@@ -1,7 +1,7 @@
-SRC = main.cpp Span.cpp
+SRC = main.cpp
 CC = clang++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address
-NAME = span
+NAME = mutant
 OBJS = ${SRC:.cpp=.o}
 
 ${NAME} : ${OBJS}

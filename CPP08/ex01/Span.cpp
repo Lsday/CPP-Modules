@@ -6,7 +6,7 @@
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:53:02 by oronda            #+#    #+#             */
-/*   Updated: 2022/02/08 13:21:08 by oronda           ###   ########.fr       */
+/*   Updated: 2022/02/08 14:33:00 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int Span::shortestSpan()
 	
 	int gap = 0, temp_gap = 0;
 	//std::sort(_items.begin(), _items.end());
-	for (int i = 0; i < _items.size() - 1; i++)
+	for (size_t i = 0; i < _items.size() - 1; i++)
 	{
 		temp_gap = abs(_items[i + 1] - _items[i]);
 		if (i == 0)
@@ -74,7 +74,7 @@ int Span::longestSpan()
 		
 	int gap = 0, temp_gap = 0;
 	//std::sort(_items.begin(), _items.end());
-	for (int i = 0; i < _items.size() - 1; i++)
+	for (size_t i = 0; i < _items.size() - 1; i++)
 	{
 		temp_gap = abs( _items[i + 1] - _items[i]);
 		if (temp_gap > gap)
