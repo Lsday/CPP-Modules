@@ -6,7 +6,7 @@
 /*   By: oronda <oronda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:53:02 by oronda            #+#    #+#             */
-/*   Updated: 2022/02/08 12:48:50 by oronda           ###   ########.fr       */
+/*   Updated: 2022/02/08 13:21:08 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Span::Span()
 Span::Span(Span const &src)
 {
 	std::cout << "Span Copy Constructor" << std::endl;
+	this->_items = src._items;
 }
 
 Span::Span(unsigned int N)
@@ -37,6 +38,7 @@ Span::~Span()
 Span& Span::operator=(Span const &src)
 {
 	std::cout << "Span assignement operator" << std::endl;
+	this->_items = src._items;
 	return *this;
 }
 
